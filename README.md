@@ -10,7 +10,7 @@ There is no required textbook for this course.  My lectures will be primarily b
 
 ## Tentative Course Schedule
 | Week	| Lecture	|	Topic	| 
-|-------|---------|-------|-------------|
+|-------|---------|-------|
 | 1 | 1 |	Floating point numbers, Conditioning	| 
 |	| 2	|	Algorithms, Stability, Linear algebra review |	
 | 2	| 3	|	Polynomial interpolation, Linear systems |	
