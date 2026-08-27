@@ -1282,7 +1282,8 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 <div id="390ab25a" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href></a><span class="pp">@show</span> p <span class="op">=</span> <span class="fl">22</span><span class="op">/</span><span class="fl">7</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb1-2"><a href></a><span class="pp">@show</span> p <span class="op">=</span> <span class="fl">22</span><span class="op">/</span><span class="fl">7</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>p = 22 / 7 = 3.142857142857143</code></pre>
@@ -1292,7 +1293,8 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 <div id="9c14e539" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href></a><span class="pp">@show</span> <span class="fu">float</span>(<span class="cn">π</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb3-2"><a href></a><span class="pp">@show</span> <span class="fu">float</span>(<span class="cn">π</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>float(π) = 3.141592653589793</code></pre>
@@ -1303,9 +1305,10 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 <div id="4cd03f94" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href></a>acc <span class="op">=</span> <span class="fu">abs</span>(p <span class="op">-</span> <span class="cn">π</span>)</span>
-<span id="cb5-2"><a href></a><span class="fu">println</span>(<span class="st">&quot;absolute accuracy = </span><span class="sc">$</span>acc<span class="st">&quot;</span>)</span>
-<span id="cb5-3"><a href></a><span class="fu">println</span>(<span class="st">&quot;relative accuracy = </span><span class="sc">$</span>(acc<span class="op">/</span><span class="cn">π</span>)<span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb5-2"><a href></a>acc <span class="op">=</span> <span class="fu">abs</span>(p <span class="op">-</span> <span class="cn">π</span>)</span>
+<span id="cb5-3"><a href></a><span class="fu">println</span>(<span class="st">&quot;absolute accuracy = </span><span class="sc">$</span>acc<span class="st">&quot;</span>)</span>
+<span id="cb5-4"><a href></a><span class="fu">println</span>(<span class="st">&quot;relative accuracy = </span><span class="sc">$</span>(acc<span class="op">/</span><span class="cn">π</span>)<span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>absolute accuracy = 0.0012644892673496777
@@ -1317,7 +1320,8 @@ relative accuracy = 0.0004024994347707008</code></pre>
 <div id="d5052ebc" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href></a><span class="fu">println</span>(<span class="st">&quot;Number of accurate digits = </span><span class="sc">$</span>(<span class="fu">floor</span>(<span class="fu">-log10</span>(acc<span class="op">/</span><span class="cn">π</span>)))<span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb7-2"><a href></a><span class="fu">println</span>(<span class="st">&quot;Number of accurate digits = </span><span class="sc">$</span>(<span class="fu">floor</span>(<span class="fu">-log10</span>(acc<span class="op">/</span><span class="cn">π</span>)))<span class="st">&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of accurate digits = 3.0</code></pre>
@@ -1436,9 +1440,10 @@ Answer:
 <div id="6c62ba96" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>();</span>
-<span id="cb9-2"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">1.0</span>);</span>
-<span id="cb9-3"><a href></a><span class="pp">@show</span> <span class="fu">log2</span>(<span class="fu">eps</span>());</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb9-2"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>();</span>
+<span id="cb9-3"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">1.0</span>);</span>
+<span id="cb9-4"><a href></a><span class="pp">@show</span> <span class="fu">log2</span>(<span class="fu">eps</span>());</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>eps() = 2.220446049250313e-16
@@ -1451,8 +1456,9 @@ log2(eps()) = -52.0</code></pre>
 <div id="1fcdd0a0" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">1.618</span>);</span>
-<span id="cb11-2"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">161.8</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb11-2"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">1.618</span>);</span>
+<span id="cb11-3"><a href></a><span class="pp">@show</span> <span class="fu">eps</span>(<span class="fl">161.8</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>eps(1.618) = 2.220446049250313e-16
@@ -1467,8 +1473,9 @@ eps(161.8) = 2.842170943040401e-14</code></pre>
 <div id="33816280" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href></a><span class="pp">@show</span> <span class="fu">nextfloat</span>(<span class="fl">161.8</span>);</span>
-<span id="cb13-2"><a href></a><span class="pp">@show</span> <span class="fu">nextfloat</span>(<span class="fl">161.8</span>) <span class="op">-</span> <span class="fl">161.8</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb13-2"><a href></a><span class="pp">@show</span> <span class="fu">nextfloat</span>(<span class="fl">161.8</span>);</span>
+<span id="cb13-3"><a href></a><span class="pp">@show</span> <span class="fu">nextfloat</span>(<span class="fl">161.8</span>) <span class="op">-</span> <span class="fl">161.8</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>nextfloat(161.8) = 161.80000000000004
@@ -1480,7 +1487,8 @@ nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 <div id="81c124ac" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href></a><span class="pp">@show</span> <span class="fu">floatmin</span>(), <span class="fu">floatmax</span>();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb15-2"><a href></a><span class="pp">@show</span> <span class="fu">floatmin</span>(), <span class="fu">floatmax</span>();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>(floatmin(), floatmax()) = (2.2250738585072014e-308, 1.7976931348623157e308)</code></pre>
@@ -1494,8 +1502,9 @@ nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 <div id="f97365b1" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href></a><span class="pp">@show</span> <span class="fu">typeof</span>(<span class="fl">1</span>);</span>
-<span id="cb17-2"><a href></a><span class="pp">@show</span> <span class="fu">typeof</span>(<span class="fl">1.0</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb17-2"><a href></a><span class="pp">@show</span> <span class="fu">typeof</span>(<span class="fl">1</span>);</span>
+<span id="cb17-3"><a href></a><span class="pp">@show</span> <span class="fu">typeof</span>(<span class="fl">1.0</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>typeof(1) = Int64
@@ -1509,7 +1518,8 @@ typeof(1.0) = Float64</code></pre>
 <div id="cc54d7f0" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="fl">2.0</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb19-2"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="fl">2.0</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>3-element Vector{String}:
@@ -1545,7 +1555,8 @@ Answer:
 <div id="be74a620" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="fl">2</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">2</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb21-2"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="fl">2</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">2</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>4-element Vector{String}:
@@ -1560,8 +1571,9 @@ Answer:
 <div id="2639b3da" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href></a>x <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span></span>
-<span id="cb23-2"><a href></a><span class="pp">@show</span> <span class="fu">sign</span>(x), <span class="fu">exponent</span>(x), <span class="fu">significand</span>(x);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb23-2"><a href></a>x <span class="op">=</span> <span class="op">-</span><span class="fl">1.0</span></span>
+<span id="cb23-3"><a href></a><span class="pp">@show</span> <span class="fu">sign</span>(x), <span class="fu">exponent</span>(x), <span class="fu">significand</span>(x);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>(sign(x), exponent(x), significand(x)) = (-1.0, 0, -1.0)</code></pre>
@@ -1570,8 +1582,9 @@ Answer:
 <div id="c7927044" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href></a>x <span class="op">=</span> <span class="fl">0.125</span></span>
-<span id="cb25-2"><a href></a><span class="pp">@show</span> <span class="fu">sign</span>(x), <span class="fu">exponent</span>(x), <span class="fu">significand</span>(x);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb25-2"><a href></a>x <span class="op">=</span> <span class="fl">0.125</span></span>
+<span id="cb25-3"><a href></a><span class="pp">@show</span> <span class="fu">sign</span>(x), <span class="fu">exponent</span>(x), <span class="fu">significand</span>(x);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>(sign(x), exponent(x), significand(x)) = (1.0, -3, 1.0)</code></pre>
@@ -1604,8 +1617,9 @@ Answer:
 <div id="6f59750e" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href></a><span class="cn">e</span> <span class="op">=</span> <span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span></span>
-<span id="cb27-2"><a href></a>(<span class="fl">1.0</span> <span class="op">+</span> <span class="cn">e</span>) <span class="op">-</span> <span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb27-2"><a href></a><span class="cn">e</span> <span class="op">=</span> <span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span></span>
+<span id="cb27-3"><a href></a>(<span class="fl">1.0</span> <span class="op">+</span> <span class="cn">e</span>) <span class="op">-</span> <span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>0.0</code></pre>
@@ -1616,7 +1630,8 @@ Answer:
 <div id="eb36252f" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href></a><span class="fl">1.0</span> <span class="op">+</span> (<span class="cn">e</span> <span class="op">-</span> <span class="fl">1.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb29-2"><a href></a><span class="fl">1.0</span> <span class="op">+</span> (<span class="cn">e</span> <span class="op">-</span> <span class="fl">1.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>1.1102230246251565e-16</code></pre>
@@ -1831,8 +1846,9 @@ Some text
 <div id="93fcf0e1" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href></a>ϵ <span class="op">=</span> <span class="fl">1e-6</span></span>
-<span id="cb31-2"><a href></a>a,b,c <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">3</span>, (<span class="op">-</span><span class="fl">2</span><span class="op">-</span>ϵ)<span class="op">/</span><span class="fl">3</span>, (<span class="fl">1</span><span class="op">+</span>ϵ)<span class="op">/</span><span class="fl">3</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb31-2"><a href></a>ϵ <span class="op">=</span> <span class="fl">1e-6</span></span>
+<span id="cb31-3"><a href></a>a,b,c <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">3</span>, (<span class="op">-</span><span class="fl">2</span><span class="op">-</span>ϵ)<span class="op">/</span><span class="fl">3</span>, (<span class="fl">1</span><span class="op">+</span>ϵ)<span class="op">/</span><span class="fl">3</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </div>
@@ -1841,10 +1857,11 @@ Some text
 <div id="32ae2d73" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb32-1"><a href></a>d <span class="op">=</span> <span class="fu">sqrt</span>(b<span class="op">^</span><span class="fl">2</span> <span class="op">-</span> <span class="fl">4</span>a<span class="op">*</span>c)</span>
-<span id="cb32-2"><a href></a>r₁ <span class="op">=</span> (<span class="op">-</span>b<span class="op">-</span>d)<span class="op">/</span>(<span class="fl">2</span>a)</span>
-<span id="cb32-3"><a href></a>r₂ <span class="op">=</span> (<span class="op">-</span>b<span class="op">+</span>d)<span class="op">/</span>(<span class="fl">2</span>a)</span>
-<span id="cb32-4"><a href></a>(r₁,r₂)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb32-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb32-2"><a href></a>d <span class="op">=</span> <span class="fu">sqrt</span>(b<span class="op">^</span><span class="fl">2</span> <span class="op">-</span> <span class="fl">4</span>a<span class="op">*</span>c)</span>
+<span id="cb32-3"><a href></a>r₁ <span class="op">=</span> (<span class="op">-</span>b<span class="op">-</span>d)<span class="op">/</span>(<span class="fl">2</span>a)</span>
+<span id="cb32-4"><a href></a>r₂ <span class="op">=</span> (<span class="op">-</span>b<span class="op">+</span>d)<span class="op">/</span>(<span class="fl">2</span>a)</span>
+<span id="cb32-5"><a href></a>(r₁,r₂)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>(0.9999999998251499, 1.0000010001748503)</code></pre>
@@ -1858,7 +1875,8 @@ Some text
 <div id="819cae6b" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb34-1"><a href></a><span class="fu">abs</span>(<span class="fu">r₂-</span>(<span class="fl">1</span><span class="op">+</span>ϵ))<span class="op">/</span>(<span class="fl">1</span><span class="op">+</span>ϵ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb34-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb34-2"><a href></a><span class="fu">abs</span>(<span class="fu">r₂-</span>(<span class="fl">1</span><span class="op">+</span>ϵ))<span class="op">/</span>(<span class="fl">1</span><span class="op">+</span>ϵ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>1.748501815656639e-10</code></pre>
@@ -1891,7 +1909,8 @@ Some text
 <div id="4fdac803" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb36-1"><a href></a><span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span>ϵ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb36-1"><a href></a><span class="op">%%</span>julia</span>
+<span id="cb36-2"><a href></a><span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span>ϵ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <pre><code>1.1102230246251565e-10</code></pre>
