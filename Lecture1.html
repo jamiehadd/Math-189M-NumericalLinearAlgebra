@@ -3387,7 +3387,7 @@ Definition: Floating-point rounding function
 <h1>Precision and Accuracy</h1>
 <section id="accuracy" class="level2">
 <h2 class="anchored" data-anchor-id="accuracy">Accuracy</h2>
-<p>The accuracy of an approximation <span class="math inline">\(\tilde{x}\)</span> to the number of interest <span class="math inline">\(x\)</span>. The floating-point number approximation <span class="math inline">\(\tilde{x}\)</span> is represented using <span class="math inline">\(d\)</span> binary digits, but not all of these binary digits may accurately represent (agree) with the number of interest <span class="math inline">\(x\)</span> (which we may be unable to represent exactly as a floating-point number).</p>
+<p>The accuracy of an approximation <span class="math inline">\(\tilde{x}\)</span> measures agreement with (closeness to) the number of interest <span class="math inline">\(x\)</span>. The floating-point number approximation <span class="math inline">\(\tilde{x}\)</span> is represented using <span class="math inline">\(d\)</span> binary digits, but not all of these binary digits may accurately represent (agree) with the number of interest <span class="math inline">\(x\)</span> (which we may be unable to represent exactly as a floating-point number).</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3419,7 +3419,7 @@ Definition:
 </section>
 <section id="example-approximation-to-pi" class="level2">
 <h2 class="anchored" data-anchor-id="example-approximation-to-pi">Example: Approximation to <span class="math inline">\(\pi\)</span></h2>
-<div id="390ab25a" class="cell" data-execution_count="1">
+<div id="390ab25a" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3430,7 +3430,7 @@ Definition:
 </div>
 </div>
 <p><span data-when-format="pptx">One really cool feature of the Julia programming language is that we can write programs using a broad variety of unicode characters. For instance, below we have used the unicode character <span class="math inline">\(\pi\)</span> – we get this to appear by typing <code>\pi</code> and then the tab button. Many symbol commands from LaTeX work in this same way, and additionally many more symbols can be completed – see the table at <a href="https://docs.julialang.org/en/v1/manual/unicode-input/" class="uri">https://docs.julialang.org/en/v1/manual/unicode-input/</a>.</span></p>
-<div id="9c14e539" class="cell" data-execution_count="2">
+<div id="9c14e539" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3440,7 +3440,7 @@ Definition:
 <pre><code>float(π) = 3.141592653589793</code></pre>
 </div>
 </div>
-<div id="4cd03f94" class="cell" data-execution_count="3">
+<div id="4cd03f94" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3454,7 +3454,7 @@ relative accuracy = 0.0004024994347707008</code></pre>
 </div>
 </div>
 <p><span data-when-format="pptx">Another nice feature of Julia is the <code>$</code>, which substitutes the named variable or expression’s value into the string. This is sometimes called <em>interpolation</em>.</span></p>
-<div id="d5052ebc" class="cell" data-execution_count="4">
+<div id="d5052ebc" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3573,7 +3573,7 @@ Answer:
 </details>
 <hr>
 <p>The Julia command for double precision <span class="math inline">\(\epsilon_{\text{mach}}\)</span> is <code>eps()</code>. Recall that this value is proportional to the spacing between adjacent floating-point values at <code>1.0</code>.</p>
-<div id="6c62ba96" class="cell" data-execution_count="5">
+<div id="6c62ba96" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3588,7 +3588,7 @@ log2(eps()) = -52.0</code></pre>
 </div>
 </div>
 <p>We can get values proportional to the spacing at other values by passing them as input to <code>eps()</code>.</p>
-<div id="1fcdd0a0" class="cell" data-execution_count="6">
+<div id="1fcdd0a0" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3602,7 +3602,7 @@ eps(161.8) = 2.842170943040401e-14</code></pre>
 </div>
 <hr>
 <p>We can also see the next floating-point number larger than a given value using <code>nextfloat()</code>.</p>
-<div id="33816280" class="cell" data-execution_count="7">
+<div id="33816280" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3614,8 +3614,8 @@ eps(161.8) = 2.842170943040401e-14</code></pre>
 nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 </div>
 </div>
-<p>The range<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of positive values representable in double precision is</p>
-<div id="81c124ac" class="cell" data-execution_count="8">
+<p>The range<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of positive values representable in double precision is:</p>
+<div id="81c124ac" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3627,7 +3627,7 @@ nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 </div>
 <hr>
 <p>Like other languages, Julia has different types, which is very important for numerical computing (as we’ll see in more detail later)!</p>
-<div id="f97365b1" class="cell" data-execution_count="9">
+<div id="f97365b1" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3641,7 +3641,7 @@ typeof(1.0) = Float64</code></pre>
 </div>
 <hr>
 <p>The standard floating-point representation is <code>Float64</code>, which is IEEE double precision using 64 bits. <span data-when-format="pptx">We can ask Julia to show us the bits using <code>bitstring</code>.</span></p>
-<div id="cc54d7f0" class="cell" data-execution_count="10">
+<div id="cc54d7f0" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3679,7 +3679,7 @@ Answer:
 </details>
 <hr>
 <p>Note that the representation of <code>Int64</code> is different!</p>
-<div id="be74a620" class="cell" data-execution_count="11">
+<div id="be74a620" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3694,7 +3694,7 @@ Answer:
 </div>
 </div>
 <p>Julia can also give the sign, exponent, and significand in decimal. <span data-when-format="pptx">Note that the significand is the entire floating-number without the exponential; that is <span class="math inline">\((-1)^s (1 + f)\)</span>.</span></p>
-<div id="2639b3da" class="cell" data-execution_count="12">
+<div id="2639b3da" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3705,7 +3705,7 @@ Answer:
 <pre><code>(sign(x), exponent(x), significand(x)) = (-1.0, 0, -1.0)</code></pre>
 </div>
 </div>
-<div id="c7927044" class="cell" data-execution_count="13">
+<div id="c7927044" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3723,7 +3723,7 @@ Answer:
 </li>
 <li>Values smaller than <span class="math inline">\(2^{-1022}\)</span> are said to <em>underflow</em> to zero.</li>
 </ul>
-<p><span data-when-format="pptx">Overflow and underflow can cause very real, and very disastrous problems. In 1996, the European Space Agency launched their $7 billion Arianne 5 rocket, which they had spent 10 years developing. It exploded less than 40 secons into the the flight sequence. The ‘Inertial Reference System’ software that used calculations involving the velocity of the rocket to manage the flight path attempted to convert a bit of data from 64-bit floating point to 16-bit signed integer. Due to the higher velocity of the Arianne 5 rocket over previous versions, the bit of data to be converted had value greater than <span class="math inline">\(2^{15}\)</span>, which caused overflow and the guidance system to shut down.</span></p>
+<p><span data-when-format="pptx">Overflow and underflow can cause very real, and very disastrous problems. In 1996, the European Space Agency launched their $7 billion Arianne 5 rocket, which they had spent 10 years developing. It exploded less than 40 seconds into the the flight sequence. The ‘Inertial Reference System’ software that used calculations involving the velocity of the rocket to manage the flight path attempted to convert a bit of data from 64-bit floating point to 16-bit signed integer. Due to the higher velocity of the Arianne 5 rocket over previous versions, the bit of data to be converted had value greater than <span class="math inline">\(2^{15}\)</span>, which caused overflow and the guidance system to shut down.</span></p>
 <p>You should also be aware of one more double-precision value: <code>NaN</code>, which stand for <em>not a number</em>. This value is adopted after undefined arithmetic operations (like division by zero or division by values in underflow).</p>
 </section>
 </section>
@@ -3733,7 +3733,7 @@ Answer:
 <h2 class="anchored" data-anchor-id="computer-arithmetic">Computer arithmetic</h2>
 <p>In a computer, arithmetic operations operate on floating-point numbers and return floating-point results. <span data-when-format="pptx">IEEE standards define machine-analog operations for the arithmetic operations <span class="math inline">\(+, -, \times, \div, \sqrt{\cdot}\)</span>, etc.</span> Perhaps the most important thing for you to know is that while operations <span class="math inline">\(+, -, \times, /\)</span> produce <em>exact</em> results, the machine-analog operations, which we will denote <span class="math inline">\(\oplus, \ominus, \otimes, \oslash\)</span>, are not guaranteed to do so.</p>
 <p>Recall that there is no double-precision number between <span class="math inline">\(1\)</span> and <span class="math inline">\(1 + \epsilon_{\text{mach}}\)</span>. <span data-when-format="pptx">This causes the following loss of accuracy.</span></p>
-<div id="6f59750e" class="cell" data-execution_count="14">
+<div id="6f59750e" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3745,7 +3745,7 @@ Answer:
 </div>
 </div>
 <p><span data-when-format="pptx">However, in the interval <span class="math inline">\([1/2,1)\)</span>, floating-point numbers have spacing <span class="math inline">\(\epsilon_{\text{mach}}/2\)</span>, so <span class="math inline">\(1 - \epsilon_{\text{mach}}/2\)</span> and its negative are exactly representable. Rewriting the calculation above results in a very different, and exactly correct, result!</span></p>
-<div id="eb36252f" class="cell" data-execution_count="15">
+<div id="eb36252f" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3804,7 +3804,7 @@ Definition:
 </section>
 <section id="conditioning" class="level2">
 <h2 class="anchored" data-anchor-id="conditioning">Conditioning</h2>
-<p>Setting aside the sources of error in the problem calculations, we’ll consider the ratio of the relative errors of the result and the data, <span class="math display">\[\frac{\frac{|f(x) - f(\tilde{x})|}{|f(x)|}}{\frac{|x - \tilde{x}|}{|x|}}.\]</span> <span data-when-format="pptx">This ratio gives us a sense of how much the effect of the error in the representation of the data has on the solution of the problem.</span></p>
+<p>Setting aside the sources of error in the problem calculations, we’ll consider the ratio of the relative errors of the result and the data, <span class="math display">\[\frac{\frac{|f(x) - f(\tilde{x})|}{|f(x)|}}{\frac{|x - \tilde{x}|}{|x|}}.\]</span> <span data-when-format="pptx">This ratio gives us a sense of how much effect the error in the representation of the data has on the solution of the problem.</span></p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3859,7 +3859,7 @@ Exercise: Rewrite this expression
 <summary>
 Answer:
 </summary>
-Using the definition of the derivative, we have <span class="math display">\[\kappa_f(x) = \lim_{\epsilon \rightarrow 0} \left| \frac{f(x + \epsilon x) - f(x)}{\epsilon f(x)} \right| = \left| \frac{f(x + \epsilon x) - f(x)}{\epsilon x} \right| \left| \frac{x}{f(x)} \right| = \left| \frac{x f&#39;(x)}{f(x)} \right|.\]</span>
+Using the definition of the derivative, we have <span class="math display">\[\kappa_f(x) = \lim_{\epsilon \rightarrow 0} \left| \frac{f(x + \epsilon x) - f(x)}{\epsilon f(x)} \right| = \lim_{\epsilon \rightarrow 0} \left| \frac{f(x + \epsilon x) - f(x)}{\epsilon x} \right| \left| \frac{x}{f(x)} \right| = \left| \frac{x f&#39;(x)}{f(x)} \right|.\]</span>
 </details>
 <hr>
 <p>Using the previous exercise, we see that the condition number for the problem of subtracting a constant number <span class="math inline">\(c\)</span> from data <span class="math inline">\(x\)</span>, <span class="math inline">\(f(x) = x - c\)</span>, has condition number <span class="math display">\[\kappa_f(x) = \left| \frac{(x)(1)}{x-c} \right| = \frac{|x|}{|x-c|}\]</span> which is large when <span class="math inline">\(|x| \gg |x-c|\)</span>.</p>
@@ -3928,7 +3928,7 @@ Fact:
 <p>Now, noting that <span class="math inline">\(a r_1^2 + b r_1 + c = 0\)</span>, we may differentiate with respect to <span class="math inline">\(a\)</span> and get <span class="math display">\[r_1^2 + 2 a r_1 \frac{d r_1}{d a} + b \frac{d r_1}{d a} = 0.\]</span></p>
 <p>Solving this for the derivative, we have <span class="math inline">\(\frac{d r_1}{d a} = \frac{-r_1^2}{2ar_1 + b},\)</span> and thus, the conditioning is <span class="math display">\[\kappa_f(a) = \left|\frac{a}{r_1} \frac{d r_1}{d a}\right| = \left| \frac{ar_1}{2ar_1 + b}\right| = \left| \frac{r_1}{r_1 - r_2}\right|.\]</span></p>
 <p><span data-when-format="pptx">Here, we have used the quadratic formula and the fact that <span class="math display">\[\frac{|2ar_1 + b|}{|a|} = \frac{|\sqrt{b^2 - 4ac}|}{|a|} = |r_1 - r_2|.\]</span></span></p>
-<p>Thus, the condition number of a root can be arbitrarily large!</p>
+<p>Thus, the condition number of a root can be arbitrarily large when the roots are close together!</p>
 <hr>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -3945,7 +3945,7 @@ Fact:
 </div>
 <p><span data-when-format="pptx">If a polynomial has a repeated root, then the condition number of the polynomial is formally infinite.</span></p>
 <p>The polynomial <span class="math inline">\(p(x) = \frac13 (x-1)(x-1-\epsilon)\)</span> has roots <span class="math inline">\(1\)</span> and <span class="math inline">\(1+\epsilon\)</span>. For small values of <span class="math inline">\(\epsilon,\)</span> the roots are ill-conditioned.</p>
-<div id="93fcf0e1" class="cell" data-execution_count="16">
+<div id="93fcf0e1" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3955,7 +3955,7 @@ Fact:
 </div>
 <p><span data-when-format="pptx">We can use unicode <span class="math inline">\(\epsilon\)</span> as a variable by typing <code>\epsilon</code> and then hitting tab. Additionally, we can make multiple variable assignments at once, as in Line 2 above. The <code>;</code> suppresses the output from the executed Julia code.</span></p>
 <p>We can use the quadratic formula to compute the roots (this is an algorithm)!</p>
-<div id="32ae2d73" class="cell" data-execution_count="17">
+<div id="32ae2d73" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3970,7 +3970,7 @@ Fact:
 </div>
 <hr>
 <p><span data-when-format="pptx">To get <span class="math inline">\(r_1\)</span> above, we type <code>r\_1</code> and hit Tab.</span> Let’s now look at the relative error in <span class="math inline">\(r_1\)</span>!</p>
-<div id="819cae6b" class="cell" data-execution_count="18">
+<div id="819cae6b" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -4003,7 +4003,7 @@ Fact:
  
 :::
 -->
-<div id="4fdac803" class="cell" data-execution_count="19">
+<div id="4fdac803" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
