@@ -1813,9 +1813,9 @@ Some text
 <p>Some problems, such as <span class="math inline">f(x) = \sqrt{x}</span>, can have a condition number less than 1. However, every result in floating-point arithmetic is subject to rounding error at the relative level of <span class="math inline">\epsilon_{\text{mach}}</span>, so in practice, <span class="math inline">\kappa_f(x) &lt; 1</span> is no different from <span class="math inline">\kappa_f(x) = 1</span>.</p>
 </div>
 </section>
-<section id="case-study-conditioning" class="slide level2">
-<h2>Case Study: Conditioning</h2>
-<p>We’re going to consider the problem of calculating roots of a quadratic polynomial; that is finding values <span class="math inline">t</span> such that <span class="math inline">at^2 + bt + c = 0</span>. We’ll start first by considering the <em>conditioning</em> of the problem, which we might write <span class="math inline">f([a,b,c]) = [r_1,r_2]</span> for coefficients <span class="math inline">a, b, c</span> and roots <span class="math inline">r_1, r_2</span>.</p>
+<section id="case-study-conditioning-quadratic-roots" class="slide level2">
+<h2>Case Study: Conditioning (Quadratic Roots)</h2>
+<p>Problem: calculating roots of a quadratic polynomial – finding values <span class="math inline">t</span> such that <span class="math inline">at^2 + bt + c = 0</span>. We first consider the <em>conditioning</em> of the problem, which we might write <span class="math inline">f([a,b,c]) = [r_1,r_2]</span> for coefficients <span class="math inline">a, b, c</span> and roots <span class="math inline">r_1, r_2</span>.</p>
 <div class="fragment">
 <p>Since we’ve been thinking of conditioning for problems which are scalar functions, let’s think only of how <span class="math inline">r_1</span> changes as we vary <span class="math inline">a</span> and hold <span class="math inline">b</span> and <span class="math inline">c</span> fixed, that is <span class="math inline">f(a) = r_1</span>.</p>
 </div>
