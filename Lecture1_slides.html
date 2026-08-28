@@ -1567,6 +1567,23 @@ Answer:
 </div>
 </div>
 <div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Note:</strong></p>
+</div>
+<div class="callout-content">
+<p>Integers are stored using a system known as <em>Two’s complement</em> where <span class="math inline">b</span> bits are used to represent numbers between <span class="math inline">-2^{b-1}</span> and <span class="math inline">2^{b-1} - 1</span>. The first bit represents the sign of the number, <span class="math inline">k</span>. If the sign of the number <span class="math inline">k</span> is positive, the first bit is 0 and the remaining <span class="math inline">b</span> bits represent the integer <span class="math inline">k</span> in binary as usual. If the sign of the number <span class="math inline">k</span> is negative, the first bit is 1 and the remaining <span class="math inline">b-1</span> bits represent the integer <span class="math inline">k + 2^{b-1}</span> exactly.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>This representation means that adding signed integers requires only adding the binary bit strings as usual, and then dropping the bit corresponding to <span class="math inline">2^b</span>!</p>
+</div>
+</section>
+<section class="slide level2">
+
 <p>Julia can also give the sign, exponent, and significand in decimal. </p>
 <div id="2639b3da" class="cell" data-execution_count="31">
 <details class="code-fold">
@@ -1588,7 +1605,6 @@ Answer:
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>(sign(x), exponent(x), significand(x)) = (1.0, -3, 1.0)</code></pre>
-</div>
 </div>
 </div>
 </section>
