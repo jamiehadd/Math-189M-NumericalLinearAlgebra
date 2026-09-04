@@ -1279,7 +1279,7 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 </section>
 <section id="example-approximation-to-pi" class="slide level2">
 <h2>Example: Approximation to <span class="math inline">\pi</span></h2>
-<div id="390ab25a" class="cell" data-execution_count="20">
+<div id="390ab25a" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1290,7 +1290,7 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 </div>
 </div>
 <div class="fragment">
-<div id="9c14e539" class="cell" data-execution_count="21">
+<div id="9c14e539" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1302,7 +1302,7 @@ There are <span class="math inline">2^d</span> floating-point numbers in this in
 </div>
 </div>
 <div class="fragment">
-<div id="4cd03f94" class="cell" data-execution_count="22">
+<div id="4cd03f94" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1317,7 +1317,7 @@ relative accuracy = 0.0004024994347707008</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="d5052ebc" class="cell" data-execution_count="23">
+<div id="d5052ebc" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1437,7 +1437,7 @@ Answer:
 <section class="slide level2">
 
 <p>The Julia command for double precision <span class="math inline">\epsilon_{\text{mach}}</span> is <code>eps()</code>. Recall that this value is proportional to the spacing between adjacent floating-point values at <code>1.0</code>.</p>
-<div id="6c62ba96" class="cell" data-execution_count="24">
+<div id="6c62ba96" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1453,7 +1453,7 @@ log2(eps()) = -52.0</code></pre>
 </div>
 <div class="fragment">
 <p>We can get values proportional to the spacing at other values by passing them as input to <code>eps()</code>.</p>
-<div id="1fcdd0a0" class="cell" data-execution_count="25">
+<div id="1fcdd0a0" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1470,7 +1470,7 @@ eps(161.8) = 2.842170943040401e-14</code></pre>
 <section class="slide level2">
 
 <p>We can also see the next floating-point number larger than a given value using <code>nextfloat()</code>.</p>
-<div id="33816280" class="cell" data-execution_count="26">
+<div id="33816280" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1484,7 +1484,7 @@ nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 </div>
 <div class="fragment">
 <p>The range<sup>1</sup> of positive values representable in double precision is:</p>
-<div id="81c124ac" class="cell" data-execution_count="27">
+<div id="81c124ac" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1499,7 +1499,7 @@ nextfloat(161.8) - 161.8 = 2.842170943040401e-14</code></pre>
 <section class="slide level2">
 
 <p>Like other languages, Julia has different types, which is very important for numerical computing (as we’ll see in more detail later)!</p>
-<div id="f97365b1" class="cell" data-execution_count="28">
+<div id="f97365b1" class="cell" data-execution_count="30">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1515,13 +1515,13 @@ typeof(1.0) = Float64</code></pre>
 <section class="slide level2">
 
 <p>The standard floating-point representation is <code>Float64</code>, which is IEEE double precision using 64 bits. </p>
-<div id="cc54d7f0" class="cell" data-execution_count="29">
+<div id="cc54d7f0" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb19-2"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1.0</span>), <span class="fu">bitstring</span>(<span class="fl">2.0</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>3-element Vector{String}:
  &quot;0011111111110000000000000000000000000000000000000000000000000000&quot;
  &quot;1011111111110000000000000000000000000000000000000000000000000000&quot;
@@ -1552,13 +1552,13 @@ Answer:
 <section class="slide level2">
 
 <p>Note that the representation of <code>Int64</code> is different!</p>
-<div id="be74a620" class="cell" data-execution_count="30">
+<div id="be74a620" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb21-2"><a href></a>[<span class="fu">bitstring</span>(<span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">1</span>), <span class="fu">bitstring</span>(<span class="fl">2</span>), <span class="fu">bitstring</span>(<span class="op">-</span><span class="fl">2</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>4-element Vector{String}:
  &quot;0000000000000000000000000000000000000000000000000000000000000001&quot;
  &quot;1111111111111111111111111111111111111111111111111111111111111111&quot;
@@ -1585,7 +1585,7 @@ Answer:
 <section class="slide level2">
 
 <p>Julia can also give the sign, exponent, and significand in decimal. </p>
-<div id="2639b3da" class="cell" data-execution_count="31">
+<div id="2639b3da" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1596,7 +1596,7 @@ Answer:
 <pre><code>(sign(x), exponent(x), significand(x)) = (-1.0, 0, -1.0)</code></pre>
 </div>
 </div>
-<div id="c7927044" class="cell" data-execution_count="32">
+<div id="c7927044" class="cell" data-execution_count="34">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1630,26 +1630,26 @@ Answer:
 <p>In a computer, arithmetic operations operate on floating-point numbers and return floating-point results. Perhaps the most important thing for you to know is that while operations <span class="math inline">+, -, \times, /</span> produce <em>exact</em> results, the machine-analog operations, which we will denote <span class="math inline">\oplus, \ominus, \otimes, \oslash</span>, are not guaranteed to do so.</p>
 <div class="fragment">
 <p>Recall that there is no double-precision number between <span class="math inline">1</span> and <span class="math inline">1 + \epsilon_{\text{mach}}</span>. </p>
-<div id="6f59750e" class="cell" data-execution_count="33">
+<div id="6f59750e" class="cell" data-execution_count="35">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb27-2"><a href></a><span class="cn">e</span> <span class="op">=</span> <span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span></span>
 <span id="cb27-3"><a href></a>(<span class="fl">1.0</span> <span class="op">+</span> <span class="cn">e</span>) <span class="op">-</span> <span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="35">
 <pre><code>0.0</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<div id="eb36252f" class="cell" data-execution_count="34">
+<div id="eb36252f" class="cell" data-execution_count="36">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb29-2"><a href></a><span class="fl">1.0</span> <span class="op">+</span> (<span class="cn">e</span> <span class="op">-</span> <span class="fl">1.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>1.1102230246251565e-16</code></pre>
 </div>
 </div>
@@ -1859,7 +1859,7 @@ Some text
 </div>
 <div class="fragment">
 <p>The polynomial <span class="math inline">p(x) = \frac13 (x-1)(x-1-\epsilon)</span> has roots <span class="math inline">1</span> and <span class="math inline">1+\epsilon</span>. For small values of <span class="math inline">\epsilon,</span> the roots are ill-conditioned.</p>
-<div id="93fcf0e1" class="cell" data-execution_count="35">
+<div id="93fcf0e1" class="cell" data-execution_count="37">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1870,7 +1870,7 @@ Some text
 </div>
 <div class="fragment">
 <p>We can use the quadratic formula to compute the roots (this is an algorithm)!</p>
-<div id="32ae2d73" class="cell" data-execution_count="36">
+<div id="32ae2d73" class="cell" data-execution_count="38">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb32-1"><a href></a><span class="op">%%</span>julia</span>
@@ -1879,7 +1879,7 @@ Some text
 <span id="cb32-4"><a href></a>r₂ <span class="op">=</span> (<span class="op">-</span>b<span class="op">+</span>d)<span class="op">/</span>(<span class="fl">2</span>a)</span>
 <span id="cb32-5"><a href></a>(r₁,r₂)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>(0.9999999998251499, 1.0000010001748503)</code></pre>
 </div>
 </div>
@@ -1887,14 +1887,14 @@ Some text
 </section>
 <section class="slide level2">
 
-<p> Let’s now look at the relative error in <span class="math inline">r_1</span>!</p>
-<div id="819cae6b" class="cell" data-execution_count="37">
+<p> Let’s now look at the relative error in <span class="math inline">r_2</span>!</p>
+<div id="819cae6b" class="cell" data-execution_count="39">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb34-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb34-2"><a href></a><span class="fu">abs</span>(<span class="fu">r₂-</span>(<span class="fl">1</span><span class="op">+</span>ϵ))<span class="op">/</span>(<span class="fl">1</span><span class="op">+</span>ϵ)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="39">
 <pre><code>1.748501815656639e-10</code></pre>
 </div>
 </div>
@@ -1922,13 +1922,13 @@ Some text
  
 :::
 -->
-<div id="4fdac803" class="cell" data-execution_count="38">
+<div id="4fdac803" class="cell" data-execution_count="40">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource julia number-lines code-with-copy"><code class="sourceCode julia"><span id="cb36-1"><a href></a><span class="op">%%</span>julia</span>
 <span id="cb36-2"><a href></a><span class="fu">eps</span>()<span class="op">/</span><span class="fl">2</span>ϵ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>1.1102230246251565e-10</code></pre>
 </div>
 </div>
