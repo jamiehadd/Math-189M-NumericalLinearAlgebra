@@ -3251,51 +3251,6 @@ window.Quarto = {
 </header>
 
 
----
-title: &quot;Lecture 22: Sparse matrices: storage, basic operations, graphs&quot;
-author: &quot;Jamie Haddock&quot;
-format: 
-    revealjs:
-        output-file: Lecture22_slides
-        slide-number: true
-        preview-links: auto
-        logo: figs/hmc.png
-        css: input/slides.css
-        incremental: true
-        smaller: true
-        code-fold: true
-        embed-resources: true
-        html-math-method: mathjax
-    html: 
-        output-file: Lecture22
-        code-fold: true
-        embed-resources: true
-        code-links:
-        - text: &quot;Open in Colab&quot;
-          href: &quot;https://colab.research.google.com/github/jamiehadd/Math-189M-NumericalLinearAlgebra/blob/main/Lecture22_Sparse_matrices_storage_basic_operations_graphs.ipynb&quot;
-          icon: &quot;laptop&quot;
-    pdf:
-        output-file: Lecture22
-        documentclass: article
-        toc: true
-        number-sections: true
-        geometry:
-          - top=1in
-          - left=1in
-          - bottom=1in
-          - right=1in
-format-links: false
-jupyter: julia-1.9
-colab:
-  gh-user: &quot;jamiehadd&quot;   
-  gh-repo: &quot;Math-189M-NumericalLinearAlgebra&quot; 
-filters: 
-  - input/remove-pause.lua
-  - colab
-execute:
-  echo: true
-  eval: true
----
 <section id="sparse-matrices" class="level1">
 <h1>Sparse matrices</h1>
 <ul>
@@ -3332,7 +3287,7 @@ A = \begin{bmatrix} 4.1 &amp; 0 &amp; 2.9 &amp; 0 \\ 1.2 &amp; -0.3 &amp; 0 &amp
 \end{aligned}
 \]</span></p>
 <p><code>rowptr</code> has length <span class="math inline">\(m+1\)</span>, and the total storage is proportional to the number of nonzeros.</p>
-<div id="ad56b493" class="cell" data-execution_count="8">
+<div id="ad56b493" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3387,8 +3342,8 @@ Exercise
 </section>
 <section id="matvec" class="level2">
 <h2 class="anchored" data-anchor-id="matvec">Matvec</h2>
-<p>Pseudocode for sparse matrix-vector multiplication <span class="math inline">\(y = Ax\)</span> for a matrix stored in CSR:</p>
-<div id="cell10" class="cell" data-execution_count="9">
+<p>Let’s consider how to calculate sparse matrix-vector multiplication <span class="math inline">\(y = Ax\)</span> for a matrix stored in CSR:</p>
+<div id="cell10" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3406,7 +3361,6 @@ Exercise
 <pre><code>csr_matvec (generic function with 1 method)</code></pre>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-default callout-note callout-titled" title="Exercise">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3420,8 +3374,9 @@ Exercise
 <p>Try writing code for matvec with <span class="math inline">\(A^\top\)</span>, where <span class="math inline">\(A\)</span> is given in CSR format.</p>
 </div>
 </div>
+<hr>
 <p><strong>Solution.</strong> Loop over the rows of <span class="math inline">\(A\)</span> as before, but now each stored entry <span class="math inline">\(a_{ik}\)</span> <em>adds into</em> entry <code>colval[k]</code> of the output, instead of being gathered into entry <span class="math inline">\(i\)</span>:</p>
-<div id="cell13" class="cell" data-execution_count="10">
+<div id="cell13" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3448,7 +3403,7 @@ Exercise
 <li>Example, the Frobenius norm: only the nonzeros contribute, <span class="math display">\[\|A\|_F = \Big( \sum_{i,j} |a_{ij}|^2 \Big)^{1/2} = \Big( \sum_k |\texttt{nzval[k]}|^2 \Big)^{1/2},\]</span> so the cost is proportional to the number of nonzeros.</li>
 </ul></li>
 </ul>
-<div id="cell15" class="cell" data-execution_count="11">
+<div id="cell15" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>julia</span>
@@ -3504,7 +3459,7 @@ Exercise
 </figure>
 </div>
 <ul>
-<li>Note: we are not recording self-loops.</li>
+<li>Note: we won’t record self-loops in our graph visualizations since the matrices we’ll consider will often have nonzero diagonals.</li>
 </ul>
 </section>
 </section>
